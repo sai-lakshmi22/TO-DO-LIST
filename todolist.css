@@ -1,0 +1,134 @@
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      box-sizing: border-box;
+    }
+
+    .container {
+      width: 100%;
+      min-height: 100vh;
+      background:purple;
+      padding: 10px;
+    }
+
+    .todo-app {
+      width: 70%;
+      min-width: 280px;
+      background: #fff;
+      margin: 100px auto 20px;
+      padding: 40px 30px 70px;
+      border-radius: 10px;
+    }
+
+    .todo-app h2 {
+      color: #002765;
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+	  font-size:30px;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #edeef0;
+      border-radius: 30px;
+      padding-left: 20px;
+      margin-bottom: 25px;
+    }
+
+    input {
+      flex: 1;
+      border: none;
+      outline: none;
+      background: transparent;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      border: none;
+      outline: none;
+      padding: 10px 50px;
+      background: #ff5945;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 20px;
+    }
+
+    ul li {
+      list-style: none;
+      font-size: 17px;
+      padding: 18px 8px 12px 50px;
+      user-select: none;
+      cursor: pointer;
+      position: relative;
+    }
+
+    ul li::before {
+      content: '';
+      position: absolute;
+      height: 22px;
+      width: 20px;
+      border-radius: 50%;
+      border: 2px solid #555;
+      background-color: transparent;
+      top: 12px;
+      left: 8px;
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    ul li.checked {
+      color: #555;
+      text-decoration: line-through;
+      background-color: #f0f0f0;
+    }
+
+      ul li.checked::before {
+  content: '✔'; /* Tick mark */
+  color: green;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 2px solid green;
+	}
+
+    ul li span.delete,
+    ul li span.edit {
+      position: absolute;
+      top: 5px;
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+      color: #fff;
+      line-height: 40px;
+      text-align: center;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    ul li span.delete {
+      right: 0;
+      background-color: red;
+    }
+
+    ul li span.edit {
+      right: 45px;
+      background-color: #ff5945;
+    }
+
+    ul li .task-text {
+      display: inline-block;
+      margin-left: 10px;
+    }
+
+    ul li:hover {
+      background: #edeef0;
+    }
+  
